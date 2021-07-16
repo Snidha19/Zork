@@ -17,19 +17,29 @@ public abstract class Command {
 //        return null;
 //    }
 
-    protected abstract void execute();
+    protected abstract void run(String args);
 
-    public void execute(String command){
+
+    public void execute(String command,String[] cmds){
         if (numArgs == 1){
-            if (command.length() > 2){
+            if (cmds.length > 2){
                 args = command.split(" ")[2];
+                run(args);
             }else{
-                args = command.split(" ")[1];
+                if (cmds[0].equals("attack") && cmds[1].equals("with")) {
+                    System.out.println("Incorrect usage of Attack command");
+                }else {
+                    if(!cmds[0].equals("attack")) {
+                        args = command.split(" ")[1];
+                        run(args);
+                    }
+                }
             }
         }else{
-            args="";
+            args=null;
+            run(args);
         }
-        execute();
+
     }
 
 

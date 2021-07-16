@@ -1,9 +1,19 @@
 package io.muzoo.ssc.Zork;
 
 public class Monster {
-    private int maxHp = 200;
+    private int maxHp = 150;
     private int hp = maxHp;
     private int attackPower = 20;
+
+//    public void Monster(int maxHp, int attackPower, int Hp){
+//        this.maxHp = maxHp;
+//        this.attackPower = attackPower;
+//    }
+
+    public void Monster(){
+       this.hp = maxHp;
+       this.attackPower = attackPower;
+    }
 
     public int getMaxHp(){ return maxHp;}
     public int getHp() { return hp; }
@@ -15,7 +25,7 @@ public class Monster {
     }
 
     public void decreaseHp(int decrement){
-        hp+=decrement;
+        hp-=decrement;
         hp = Math.max(hp, 0);
     }
 

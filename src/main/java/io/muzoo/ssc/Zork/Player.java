@@ -3,13 +3,19 @@ package io.muzoo.ssc.Zork;
 import io.muzoo.ssc.Zork.item.Item;
 
 public class Player {
-    private int maxHp = 100;
-    private int attackPower = 15;
+    public int maxHp;
+    private int attackPower;
     private int hp;
     public Item item;
     public static final int increaseAP = 10;
     public static final int increaseHP = 20;
 
+    public Player(Item weapon){
+        this.maxHp = 100;
+        this.attackPower = 200;
+        this.hp = maxHp;
+        item = weapon;
+    }
 
     public Player(int maxHp, int attackPower, int hp){
         this.maxHp = maxHp;

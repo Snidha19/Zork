@@ -9,7 +9,7 @@ public class ExitCommand extends Command {
     }
 
 
-    public void execute() {
+    public void run(String args) {
         System.out.println("Game exit");
         System.exit(0);
     }
