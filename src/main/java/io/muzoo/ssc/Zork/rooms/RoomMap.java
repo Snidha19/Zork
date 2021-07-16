@@ -7,4 +7,5 @@ public class RoomMap {
     Room forest = new Room("forest",false,false,true,true);
     Room start = new Room("start",false,true,true,false);
     Room openField = new Room("openField" ,true,true,true,true);
+
 }
