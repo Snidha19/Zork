@@ -1,9 +1,7 @@
 package io.muzoo.ssc.Zork;
 
 import io.muzoo.ssc.Zork.command.Command;
-
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Game {
 
