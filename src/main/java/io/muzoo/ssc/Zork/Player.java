@@ -17,7 +17,7 @@ public class Player {
         item = weapon;
     }
 
-    public Player(int maxHp, int attackPower, int hp){
+    public Player(){
         this.maxHp = maxHp;
         this.hp = hp;
         this.attackPower = attackPower;
@@ -52,5 +52,12 @@ public class Player {
     public Item getItem(){
         return item;
     }
+
+    public Item dropItem(){
+        Item dropped = getItem();
+        item = null;
+        return dropped;
+    }
+
 
 }

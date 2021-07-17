@@ -1,7 +1,5 @@
 package io.muzoo.ssc.Zork.command;
 
-import io.muzoo.ssc.Zork.Game;
-
 public abstract class Command {
 
     int numArgs;
@@ -12,10 +10,6 @@ public abstract class Command {
         this.description = description;
         this.numArgs = numArgs;
     }
-
-//    String getCommand() {
-//        return null;
-//    }
 
     protected abstract void run(String args);
 

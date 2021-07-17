@@ -1,6 +1,7 @@
 package io.muzoo.ssc.Zork.command;
 
 import io.muzoo.ssc.Zork.Game;
+import io.muzoo.ssc.Zork.Player;
 
 public class QuitCommand extends Command{
 
@@ -12,6 +13,8 @@ public class QuitCommand extends Command{
 
     @Override
     protected void run(String args) {
-
+        System.out.println("Quit current game");
+        System.out.println("Start a new game");
+        game.start();
     }
 }

@@ -19,16 +19,12 @@ public class Game {
         start();
         commands.generateCommands(this);
         currentRoom = map.getCurrentRoom();
-        System.out.println(currentRoom.getRoomName());
-        System.out.println(currentRoom.getItem().getItemName());
-        System.out.println(currentRoom.hasSouthDoor());
         Item item = currentRoom.getItem();
         player = new Player(item);
-        System.out.println(player.getItem());
     }
 
     public void start(){
-        output.println(" Zork Game");
+        output.println(" Start Zork Game");
         output.println(" Type \"help\" to print all the commands");
         output.println(" Type \"exit\" to exit the game");
     }

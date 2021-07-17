@@ -3,6 +3,9 @@ package io.muzoo.ssc.Zork.rooms;
 import io.muzoo.ssc.Zork.Monster;
 import io.muzoo.ssc.Zork.item.Item;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Room {
 
     private String roomName;
@@ -10,6 +13,7 @@ public class Room {
     private Monster monster;
     private int numMonster;
     boolean[] doors; // N,S,E,W   true: door, false: no door
+    public Map<String,Room> nextRooms = new HashMap<>();
 
     public Room(String name, boolean N, boolean S, boolean E, boolean W, Item item, Monster monster, int num){
         this.roomName = name;
@@ -20,7 +24,7 @@ public class Room {
     }
 
     public boolean monsterExist(){ return this.monster!=null;}
-    public boolean itemExist(){ return this.item!=null;}
+    public boolean hasItem(){ return this.item!=null;}
 
     public Monster getMonster() { return this.monster; }
     public void removeMonster() { monster = null;}
@@ -36,7 +40,22 @@ public class Room {
         return numMonster;
     }
 
+    public void reduceMonsterNum(){
+        numMonster--;
+    }
+
     public String getRoomName() {
         return roomName;
+    }
+
+    public void setNextRooms(Room N, Room S, Room E, Room W){
+            nextRooms.put("north", N);
+            nextRooms.put("south", S);
+            nextRooms.put("east", E);
+            nextRooms.put("west", W);
+    }
+
+    public Room getNextRoom(String direction){
+        return nextRooms.get(direction);
     }
 }

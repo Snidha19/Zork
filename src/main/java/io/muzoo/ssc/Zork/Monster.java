@@ -3,7 +3,7 @@ package io.muzoo.ssc.Zork;
 public class Monster {
     private int maxHp = 150;
     private int hp = maxHp;
-    private int attackPower = 20;
+    private int attackPower = 150;
 
 //    public void Monster(int maxHp, int attackPower, int Hp){
 //        this.maxHp = maxHp;

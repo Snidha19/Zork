@@ -1,7 +1,6 @@
 package io.muzoo.ssc.Zork.command;
 
 import io.muzoo.ssc.Zork.CommandFactory;
-import io.muzoo.ssc.Zork.Game;
 
 public class HelpCommand extends Command{
 
