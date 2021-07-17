@@ -4,8 +4,6 @@ import io.muzoo.ssc.Zork.Game;
 import io.muzoo.ssc.Zork.Monster;
 import io.muzoo.ssc.Zork.rooms.Room;
 
-import java.util.Scanner;
-
 public class AttackCommand extends Command{
 
     Game game;
